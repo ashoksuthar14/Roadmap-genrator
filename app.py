@@ -60,7 +60,7 @@ def generate_roadmap(user_info, reinforcement_model):
         """
         
         final_prompt = enhance_prompt_with_recommendations(base_prompt, recommendations)
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-2.0-flash')
         response = model.generate_content(final_prompt)
         
         return response.text, recommendations
